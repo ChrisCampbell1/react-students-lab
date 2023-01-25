@@ -1,7 +1,7 @@
-const Score = (props) => {
+const Score = ( {score} ) => {
   return (  
     <div>
-      this is a score
+        <li>Date: {score.date}, Score: {score.score}</li>
     </div>
   )
 }
