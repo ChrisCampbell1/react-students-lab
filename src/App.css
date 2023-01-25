@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.studentCard{
+  border: 1px solid black;
+  width: 500px;
+  margin: 20px;
+  padding: 10px;
+}

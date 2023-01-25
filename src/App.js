@@ -7,11 +7,11 @@ function App() {
   const [students, setStudents] = useState(studentsList)
   
   return (
-    <div>
-      {students.map((student, idx) =>
-      <Student key={idx} student={student}/>
-        )}
-    </div>
+      <div className='container'>
+        {students.map((student, idx) =>
+        <Student key={idx} student={student}/>
+          )}
+      </div>
   );
 }
 

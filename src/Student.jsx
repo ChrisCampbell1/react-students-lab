@@ -1,15 +1,26 @@
+import { useState } from "react";
 import Score from "./Score";
 
 const Student = ( {student} ) => {
+  const [showScores, setShowScores] = useState(false)
+
+  function handleShowScores() {
+    setShowScores(!showScores)
+  }
+  
   return (  
-    <div>
+    <div className="studentCard">
       <h3>{student.name}</h3>
       <p>{student.bio}</p>
-      <ul>
+      <button onClick={handleShowScores}>
+        {showScores ? "Hide Scores" : "Show Scores"}
+      </button>
+      {showScores && <ul>
       {student.scores.map((score, idx) =>
         <Score key={idx} score={score}/>
       )}
-      </ul>
+      </ul>}
+
       
     </div>
   )
